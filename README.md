@@ -10,7 +10,7 @@ Remove
 
 Publish
 
-`nx run vanilla-dates:build`
+`nx run vanilla-dates:build && cp `
 
 First Time: `npm publish dist/libs/react-form-hook --access public`
 
