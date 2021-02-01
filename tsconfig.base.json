@@ -14,7 +14,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@reusejs/react-form-hook": ["libs/react-form-hook/src/index.js"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

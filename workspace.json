@@ -1,9 +1,57 @@
 {
-  
-  
   "version": 2,
-  
-  "projects": {},
+  "projects": {
+    "react-form-hook": {
+      "root": "libs/react-form-hook",
+      "sourceRoot": "libs/react-form-hook/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/react-form-hook/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "build": {
+          "executor": "@nrwl/web:package",
+          "outputs": [
+            "{options.outputPath}"
+          ],
+          "options": {
+            "outputPath": "dist/libs/react-form-hook",
+            "tsConfig": "libs/react-form-hook/tsconfig.lib.json",
+            "project": "libs/react-form-hook/package.json",
+            "entryFile": "libs/react-form-hook/src/index.js",
+            "external": [
+              "react",
+              "react-dom"
+            ],
+            "babelConfig": "@nrwl/react/plugins/bundle-babel",
+            "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+            "assets": [
+              {
+                "glob": "README.md",
+                "input": ".",
+                "output": "."
+              }
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/react-form-hook"
+          ],
+          "options": {
+            "jestConfig": "libs/react-form-hook/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    }
+  },
   "cli": {
     "defaultCollection": "@nrwl/workspace"
   }

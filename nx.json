@@ -27,5 +27,13 @@
       }
     }
   },
-  "projects": {}
+  "projects": {
+    "react-form-hook": {
+      "tags": [
+        "scope:public",
+        "type:util",
+        "target:all"
+      ]
+    }
+  }
 }
