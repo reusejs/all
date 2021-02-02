@@ -47,6 +47,21 @@ export default function (initial) {
       setBusy(false);
       return errors;
     },
+    validateSingleField: (v, key, fieldRules) => {
+      setBusy(true);
+      let validateJsErrorsForField = validate.single(v, fieldRules);
+      if (!validateJsErrorsForField) {
+        errors.push({
+          [key]: null
+        });
+      } else {
+        errors.push({
+          [key]: validateJsErrorsForField
+        });
+      }
+      setBusy(false);
+      return errors;
+    },
     setField: (k, v) =>
       setValue((s) => {
         s = setByDot(s, k, v);
