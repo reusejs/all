@@ -45,7 +45,7 @@ export default function (initial) {
         errors.set(validateJsErrors);
       }
       setBusy(false);
-      return errors;
+      return validateJsErrors === undefined ? true : false;
     },
     validateSingleField: (v, key, fieldRules) => {
       setBusy(true);
@@ -60,7 +60,7 @@ export default function (initial) {
         });
       }
       setBusy(false);
-      return errors;
+      return validateJsErrorsForField === undefined ? true : false;
     },
     setField: (k, v) =>
       setValue((s) => {
