@@ -15,7 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@reusejs/react-form-hook": ["libs/react-form-hook/src/index.js"]
+      "@reusejs/react-form-hook": ["libs/react-form-hook/src/index.js"],
+      "@reusejs/react-textarea-autogrow": [
+        "libs/react-textarea-autogrow/src/index.js"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
