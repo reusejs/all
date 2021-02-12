@@ -1,4 +1,12 @@
 {
   "name": "@reusejs/react-textarea-autogrow",
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "description": "React Textarea which autogrows",
+  "author": "Sowmya <sowmya@betalectic.com>",
+  "contributors": [],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reusejs/all"
+  }
 }
