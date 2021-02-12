@@ -50,6 +50,56 @@
           }
         }
       }
+    },
+    "react-textarea-autogrow": {
+      "root": "libs/react-textarea-autogrow",
+      "sourceRoot": "libs/react-textarea-autogrow/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/react-textarea-autogrow/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "build": {
+          "executor": "@nrwl/web:package",
+          "outputs": [
+            "{options.outputPath}"
+          ],
+          "options": {
+            "outputPath": "dist/libs/react-textarea-autogrow",
+            "tsConfig": "libs/react-textarea-autogrow/tsconfig.lib.json",
+            "project": "libs/react-textarea-autogrow/package.json",
+            "entryFile": "libs/react-textarea-autogrow/src/index.js",
+            "external": [
+              "react",
+              "react-dom"
+            ],
+            "babelConfig": "@nrwl/react/plugins/bundle-babel",
+            "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+            "assets": [
+              {
+                "glob": "README.md",
+                "input": ".",
+                "output": "."
+              }
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/react-textarea-autogrow"
+          ],
+          "options": {
+            "jestConfig": "libs/react-textarea-autogrow/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {
