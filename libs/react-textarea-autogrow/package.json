@@ -1,6 +1,6 @@
 {
   "name": "@reusejs/react-textarea-autogrow",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "React Textarea which autogrows",
   "author": "Sowmya <sowmya@betalectic.com>",
   "contributors": [],

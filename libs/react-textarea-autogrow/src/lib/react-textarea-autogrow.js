@@ -35,7 +35,7 @@ export default function AutoGrowTextarea({
 }
 
 AutoGrowTextarea.defaultProps = {
-	rows: 4,
+	rows: '4',
 	onChange: () => {},
 	placeholder: 'Please enter your text here...',
 };
