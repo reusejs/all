@@ -30,7 +30,6 @@ ReactButton.defaultProps = {
     width: '11.5rem',
     height: '2.5rem',
     border: 'unset',
-    margin: '20px',
     borderRadius: '5px',
     cursor: 'pointer',
     fontSize: '1.05em',
