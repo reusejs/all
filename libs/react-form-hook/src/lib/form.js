@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import useBetaErrors from './errors.js';
 import validate from 'validate.js';
+import result from 'lodash/result';
 
 function resolve(path, obj) {
   return path.split('.').reduce(function (prev, curr) {
