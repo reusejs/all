@@ -1,0 +1,16 @@
+{
+	"name": "@reusejs/react-editable-text",
+	"version": "0.0.5",
+	"description": "React editable text input is a component that converts your text into editable content when clicked on the text",
+	"author": "Sowmya <sowmya@betalectic.com>",
+	"contributors": [],
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/reusejs/all"
+	},
+	"dependencies": {
+		"@reusejs/react-text-input": "0.0.8",
+		"clsx": "^1.1.1"
+	}
+}
