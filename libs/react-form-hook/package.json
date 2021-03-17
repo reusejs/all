@@ -1,6 +1,6 @@
 {
   "name": "@reusejs/react-form-hook",
-  "version": "0.0.7",
+  "version": "0.0.10",
   "description": "React Form Hook to handle complex payloads, errors, validation with ease",
   "author": "Rajiv Seelam <rajiv@betalectic.com> (https://github.com/rjvim)",
   "contributors": [],

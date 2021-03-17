@@ -47,16 +47,17 @@ export default function (initial) {
       setBusy(false);
       return validateJsErrors === undefined ? true : false;
     },
-    validateSingleField: (v, key, fieldRules) => {
+    validateSingleField: (v, key) => {
       setBusy(true);
+
+      let fieldRules = result(rules, key);
+
       let validateJsErrorsForField = validate.single(v, fieldRules);
-      if (!validateJsErrorsForField) {
-        errors.push({
-          [key]: null
-        });
+      if (validateJsErrorsForField === undefined) {
+        errors.popError(key);
       } else {
         errors.push({
-          [key]: validateJsErrorsForField
+          [key]: validateJsErrorsForField,
         });
       }
       setBusy(false);
