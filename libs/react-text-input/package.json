@@ -1,0 +1,16 @@
+{
+	"name": "@reusejs/react-text-input",
+	"version": "0.0.8",
+	"description": "React Text Input component is a complete form control including a label, input, help text and error text",
+	"author": "Sowmya <sowmya@betalectic.com>",
+	"contributors": [],
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/reusejs/all"
+	},
+	"dependencies": {
+		"classnames": "^2.2.6",
+		"prop-types": "^15.7.2"
+	}
+}
