@@ -20,6 +20,9 @@
     "react-textarea-autogrow": {
       "tags": ["scope:public", "type:util", "target:all"]
     },
-    "react-text-input": { "tags": ["scope:public", "type:util", "target:all"] }
+    "react-text-input": { "tags": ["scope:public", "type:util", "target:all"] },
+    "react-editable-text": {
+      "tags": ["scope:public", "type:util", "target:all"]
+    }
   }
 }

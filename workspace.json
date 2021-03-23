@@ -150,6 +150,56 @@
           }
         }
       }
+    },
+    "react-editable-text": {
+      "root": "libs/react-editable-text",
+      "sourceRoot": "libs/react-editable-text/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/react-editable-text/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "build": {
+          "executor": "@nrwl/web:package",
+          "outputs": [
+            "{options.outputPath}"
+          ],
+          "options": {
+            "outputPath": "dist/libs/react-editable-text",
+            "tsConfig": "libs/react-editable-text/tsconfig.lib.json",
+            "project": "libs/react-editable-text/package.json",
+            "entryFile": "libs/react-editable-text/src/index.js",
+            "external": [
+              "react",
+              "react-dom"
+            ],
+            "babelConfig": "@nrwl/react/plugins/bundle-babel",
+            "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+            "assets": [
+              {
+                "glob": "README.md",
+                "input": ".",
+                "output": "."
+              }
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/react-editable-text"
+          ],
+          "options": {
+            "jestConfig": "libs/react-editable-text/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {
