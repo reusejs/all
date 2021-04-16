@@ -23,6 +23,9 @@
     "react-text-input": { "tags": ["scope:public", "type:util", "target:all"] },
     "react-editable-text": {
       "tags": ["scope:public", "type:util", "target:all"]
+    },
+    "react-search-select": {
+      "tags": ["scope:public", "type:util", "target:all"]
     }
   }
 }

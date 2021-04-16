@@ -200,6 +200,56 @@
           }
         }
       }
+    },
+    "react-search-select": {
+      "root": "libs/react-search-select",
+      "sourceRoot": "libs/react-search-select/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/react-search-select/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "build": {
+          "executor": "@nrwl/web:package",
+          "outputs": [
+            "{options.outputPath}"
+          ],
+          "options": {
+            "outputPath": "dist/libs/react-search-select",
+            "tsConfig": "libs/react-search-select/tsconfig.lib.json",
+            "project": "libs/react-search-select/package.json",
+            "entryFile": "libs/react-search-select/src/index.js",
+            "external": [
+              "react",
+              "react-dom"
+            ],
+            "babelConfig": "@nrwl/react/plugins/bundle-babel",
+            "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+            "assets": [
+              {
+                "glob": "README.md",
+                "input": ".",
+                "output": "."
+              }
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/react-search-select"
+          ],
+          "options": {
+            "jestConfig": "libs/react-search-select/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {
