@@ -1,6 +1,60 @@
 {
   "version": 2,
   "projects": {
+    "preview": {
+      "root": "apps/preview",
+      "sourceRoot": "apps/preview",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/next:build",
+          "outputs": ["{options.outputPath}"],
+          "defaultConfiguration": "production",
+          "options": {
+            "root": "apps/preview",
+            "outputPath": "dist/apps/preview"
+          },
+          "configurations": {
+            "production": {}
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/next:server",
+          "options": {
+            "buildTarget": "preview:build",
+            "dev": true
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "preview:build:production",
+              "dev": false
+            }
+          }
+        },
+        "export": {
+          "executor": "@nrwl/next:export",
+          "options": {
+            "buildTarget": "preview:build:production"
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/preview"],
+          "options": {
+            "jestConfig": "apps/preview/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["apps/preview/**/*.{ts,tsx,js,jsx}"]
+          }
+        }
+      },
+      "tags": []
+    },
     "react-editable-text": {
       "root": "libs/react-editable-text",
       "sourceRoot": "libs/react-editable-text/src",

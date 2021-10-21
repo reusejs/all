@@ -14,7 +14,13 @@ Many of the "molecular" level components are in conjunction with Nobe. You might
 This section assumes that the library is already created, and you are looking to contribute.
 
 1. All the libraries sit inside libs folders
+2. During development, you can use NextJS preview Repo to test the components in react
 
+### Create Next App
+
+- To create a new nextjs app `npx nx generate @nrwl/next:application <app> --js`
+- To create a new reactjs app `npx nx generate @nrwl/react:application account --js`
+- To remove an application `npx nx g @nrwl/workspace:remove <app-name>`
 
 Creating publishable libraries
 
