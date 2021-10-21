@@ -15,13 +15,13 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@reusejs/react-editable-text": ["libs/react-editable-text/src/index.js"],
       "@reusejs/react-form-hook": ["libs/react-form-hook/src/index.js"],
+      "@reusejs/react-search-select": ["libs/react-search-select/src/index.js"],
+      "@reusejs/react-text-input": ["libs/react-text-input/src/index.js"],
       "@reusejs/react-textarea-autogrow": [
         "libs/react-textarea-autogrow/src/index.js"
-      ],
-      "@reusejs/react-text-input": ["libs/react-text-input/src/index.js"],
-      "@reusejs/react-editable-text": ["libs/react-editable-text/src/index.js"],
-      "@reusejs/react-search-select": ["libs/react-search-select/src/index.js"]
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

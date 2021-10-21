@@ -1,156 +1,6 @@
 {
   "version": 2,
   "projects": {
-    "react-form-hook": {
-      "root": "libs/react-form-hook",
-      "sourceRoot": "libs/react-form-hook/src",
-      "projectType": "library",
-      "targets": {
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/react-form-hook/**/*.{ts,tsx,js,jsx}"
-            ]
-          }
-        },
-        "build": {
-          "executor": "@nrwl/web:package",
-          "outputs": [
-            "{options.outputPath}"
-          ],
-          "options": {
-            "outputPath": "dist/libs/react-form-hook",
-            "tsConfig": "libs/react-form-hook/tsconfig.lib.json",
-            "project": "libs/react-form-hook/package.json",
-            "entryFile": "libs/react-form-hook/src/index.js",
-            "external": [
-              "react",
-              "react-dom"
-            ],
-            "babelConfig": "@nrwl/react/plugins/bundle-babel",
-            "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
-            "assets": [
-              {
-                "glob": "README.md",
-                "input": ".",
-                "output": "."
-              }
-            ]
-          }
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/react-form-hook"
-          ],
-          "options": {
-            "jestConfig": "libs/react-form-hook/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
-    "react-textarea-autogrow": {
-      "root": "libs/react-textarea-autogrow",
-      "sourceRoot": "libs/react-textarea-autogrow/src",
-      "projectType": "library",
-      "targets": {
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/react-textarea-autogrow/**/*.{ts,tsx,js,jsx}"
-            ]
-          }
-        },
-        "build": {
-          "executor": "@nrwl/web:package",
-          "outputs": [
-            "{options.outputPath}"
-          ],
-          "options": {
-            "outputPath": "dist/libs/react-textarea-autogrow",
-            "tsConfig": "libs/react-textarea-autogrow/tsconfig.lib.json",
-            "project": "libs/react-textarea-autogrow/package.json",
-            "entryFile": "libs/react-textarea-autogrow/src/index.js",
-            "external": [
-              "react",
-              "react-dom"
-            ],
-            "babelConfig": "@nrwl/react/plugins/bundle-babel",
-            "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
-            "assets": [
-              {
-                "glob": "README.md",
-                "input": ".",
-                "output": "."
-              }
-            ]
-          }
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/react-textarea-autogrow"
-          ],
-          "options": {
-            "jestConfig": "libs/react-textarea-autogrow/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
-    "react-text-input": {
-      "root": "libs/react-text-input",
-      "sourceRoot": "libs/react-text-input/src",
-      "projectType": "library",
-      "targets": {
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/react-text-input/**/*.{ts,tsx,js,jsx}"
-            ]
-          }
-        },
-        "build": {
-          "executor": "@nrwl/web:package",
-          "outputs": [
-            "{options.outputPath}"
-          ],
-          "options": {
-            "outputPath": "dist/libs/react-text-input",
-            "tsConfig": "libs/react-text-input/tsconfig.lib.json",
-            "project": "libs/react-text-input/package.json",
-            "entryFile": "libs/react-text-input/src/index.js",
-            "external": [
-              "react",
-              "react-dom"
-            ],
-            "babelConfig": "@nrwl/react/plugins/bundle-babel",
-            "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
-            "assets": [
-              {
-                "glob": "README.md",
-                "input": ".",
-                "output": "."
-              }
-            ]
-          }
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/react-text-input"
-          ],
-          "options": {
-            "jestConfig": "libs/react-text-input/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
     "react-editable-text": {
       "root": "libs/react-editable-text",
       "sourceRoot": "libs/react-editable-text/src",
@@ -162,22 +12,18 @@
             "lintFilePatterns": [
               "libs/react-editable-text/**/*.{ts,tsx,js,jsx}"
             ]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         },
         "build": {
           "executor": "@nrwl/web:package",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/libs/react-editable-text",
             "tsConfig": "libs/react-editable-text/tsconfig.lib.json",
             "project": "libs/react-editable-text/package.json",
             "entryFile": "libs/react-editable-text/src/index.js",
-            "external": [
-              "react",
-              "react-dom"
-            ],
+            "external": ["react", "react-dom"],
             "babelConfig": "@nrwl/react/plugins/bundle-babel",
             "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
             "assets": [
@@ -191,15 +37,57 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/react-editable-text"
-          ],
+          "outputs": ["coverage/libs/react-editable-text"],
           "options": {
             "jestConfig": "libs/react-editable-text/jest.config.js",
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": ["scope:public", "type:util", "target:all"]
+    },
+    "react-form-hook": {
+      "root": "libs/react-form-hook",
+      "sourceRoot": "libs/react-form-hook/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/react-form-hook/**/*.{ts,tsx,js,jsx}"]
+          },
+          "outputs": ["{options.outputFile}"]
+        },
+        "build": {
+          "executor": "@nrwl/web:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/react-form-hook",
+            "tsConfig": "libs/react-form-hook/tsconfig.lib.json",
+            "project": "libs/react-form-hook/package.json",
+            "entryFile": "libs/react-form-hook/src/index.js",
+            "external": ["react", "react-dom"],
+            "babelConfig": "@nrwl/react/plugins/bundle-babel",
+            "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+            "assets": [
+              {
+                "glob": "README.md",
+                "input": ".",
+                "output": "."
+              }
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/react-form-hook"],
+          "options": {
+            "jestConfig": "libs/react-form-hook/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": ["scope:public", "type:util", "target:all"]
     },
     "react-search-select": {
       "root": "libs/react-search-select",
@@ -212,22 +100,18 @@
             "lintFilePatterns": [
               "libs/react-search-select/**/*.{ts,tsx,js,jsx}"
             ]
-          }
+          },
+          "outputs": ["{options.outputFile}"]
         },
         "build": {
           "executor": "@nrwl/web:package",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/libs/react-search-select",
             "tsConfig": "libs/react-search-select/tsconfig.lib.json",
             "project": "libs/react-search-select/package.json",
             "entryFile": "libs/react-search-select/src/index.js",
-            "external": [
-              "react",
-              "react-dom"
-            ],
+            "external": ["react", "react-dom"],
             "babelConfig": "@nrwl/react/plugins/bundle-babel",
             "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
             "assets": [
@@ -241,18 +125,102 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/react-search-select"
-          ],
+          "outputs": ["coverage/libs/react-search-select"],
           "options": {
             "jestConfig": "libs/react-search-select/jest.config.js",
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": ["scope:public", "type:util", "target:all"]
+    },
+    "react-text-input": {
+      "root": "libs/react-text-input",
+      "sourceRoot": "libs/react-text-input/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/react-text-input/**/*.{ts,tsx,js,jsx}"]
+          },
+          "outputs": ["{options.outputFile}"]
+        },
+        "build": {
+          "executor": "@nrwl/web:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/react-text-input",
+            "tsConfig": "libs/react-text-input/tsconfig.lib.json",
+            "project": "libs/react-text-input/package.json",
+            "entryFile": "libs/react-text-input/src/index.js",
+            "external": ["react", "react-dom"],
+            "babelConfig": "@nrwl/react/plugins/bundle-babel",
+            "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+            "assets": [
+              {
+                "glob": "README.md",
+                "input": ".",
+                "output": "."
+              }
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/react-text-input"],
+          "options": {
+            "jestConfig": "libs/react-text-input/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": ["scope:public", "type:util", "target:all"]
+    },
+    "react-textarea-autogrow": {
+      "root": "libs/react-textarea-autogrow",
+      "sourceRoot": "libs/react-textarea-autogrow/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/react-textarea-autogrow/**/*.{ts,tsx,js,jsx}"
+            ]
+          },
+          "outputs": ["{options.outputFile}"]
+        },
+        "build": {
+          "executor": "@nrwl/web:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/react-textarea-autogrow",
+            "tsConfig": "libs/react-textarea-autogrow/tsconfig.lib.json",
+            "project": "libs/react-textarea-autogrow/package.json",
+            "entryFile": "libs/react-textarea-autogrow/src/index.js",
+            "external": ["react", "react-dom"],
+            "babelConfig": "@nrwl/react/plugins/bundle-babel",
+            "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+            "assets": [
+              {
+                "glob": "README.md",
+                "input": ".",
+                "output": "."
+              }
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/react-textarea-autogrow"],
+          "options": {
+            "jestConfig": "libs/react-textarea-autogrow/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": ["scope:public", "type:util", "target:all"]
     }
-  },
-  "cli": {
-    "defaultCollection": "@nrwl/workspace"
   }
 }
